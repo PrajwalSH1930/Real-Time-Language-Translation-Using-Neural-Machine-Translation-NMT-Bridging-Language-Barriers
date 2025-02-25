@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>English to Indian Language Translator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>English to Indian Language Translator</h1>
+    <form method="POST">
+        <label for="english_text">Enter English Text:</label><br>
+        <textarea id="english_text" name="english_text" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="target_language">Select Target Language:</label><br>
+        <select id="target_language" name="target_language" required>
+            {% for language, code in languages.items() %}
+                <option value="{{ code }}">{{ language }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Translate">
+    </form>
+
+    {% if translated_text %}
+        <h2>Translated Text:</h2>
+        <p>{{ translated_text }}</p>
+    {% endif %}
+</body>
+</html>
