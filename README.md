@@ -41,3 +41,11 @@ This is a web application that translates English text to various Indian languag
 
 * Ensure you have a stable internet connection for the model to download.
 * The translation quality may vary depending on the language and the complexity of the input text.
+
+## Important Notes:
+
+* Virtual Environment: Using a virtual environment is highly recommended to isolate your project's dependencies.
+* Dependencies: Make sure to include all necessary dependencies in your requirements.txt file.
+* README: A well-written README.md file is essential for making your project accessible to others.
+* Model Size: be aware that the models used by transformers can be very large. If you are uploading the whole model, the repository size can be very large. If you are deploying the model, it is better to download the model during deployment.
+* Security: If you plan on deploying this application, be mindful of security best practices.
